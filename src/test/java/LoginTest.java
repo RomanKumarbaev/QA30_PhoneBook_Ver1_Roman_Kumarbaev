@@ -38,20 +38,21 @@ public class LoginTest {
 
         wd.findElement(By.xpath("//button[1]")).click();
 
-        Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0);
+        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
+
+
+        //Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0);
+
 
 
 
 
     }
 
-
-
-
     @AfterMethod
     public void tearDown(){
 
-       // wd.quit();
+       //wd.quit();
     }
 
 
