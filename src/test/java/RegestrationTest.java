@@ -2,12 +2,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+public class RegestrationTest {
+
     WebDriver wd;
 
 
@@ -20,8 +20,7 @@ public class LoginTest {
     }
 
     @Test
-    public void LoginPositiveTest(){
-        //login
+    public void RegistrationPositiveTest(){
 
         WebElement loginBtn = wd.findElement(By.xpath("//*[text()='LOGIN']"));
         loginBtn.click();
@@ -29,21 +28,14 @@ public class LoginTest {
         WebElement emailInput= wd.findElement(By.xpath("//input[1]"));
         emailInput.click();
         emailInput.clear();
-        emailInput.sendKeys("noa@gmail.com");
+        emailInput.sendKeys("noa+2@gmail.com");
 
-        WebElement passwordInput = wd.findElement(By.xpath("//input[1]"));
+        WebElement passwordInput = wd.findElement(By.xpath("//input[2]"));
         passwordInput.click();
         passwordInput.clear();
         passwordInput.sendKeys("Nnoa12345$");
 
         wd.findElement(By.xpath("//button[2]")).click();
-
-        //wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
-
-
-        //Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0);
-
-
 
 
 
@@ -52,7 +44,7 @@ public class LoginTest {
     @AfterMethod
     public void tearDown(){
 
-       //wd.quit();
+        //wd.quit();
     }
 
 
