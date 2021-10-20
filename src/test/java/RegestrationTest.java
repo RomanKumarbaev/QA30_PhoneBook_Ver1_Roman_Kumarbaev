@@ -1,50 +1,55 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegestrationTest {
-
-    WebDriver wd;
 
 
-    @BeforeMethod
-    public void init(){
-        wd = new ChromeDriver();
+public class RegestrationTest extends TestBase{
 
-        wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
 
+@BeforeMethod
+public void preCondition(){
+
+    if (isLogged()){
+
+        logOut();
     }
+
+}
 
     @Test
     public void RegistrationPositiveTest(){
 
-        WebElement loginBtn = wd.findElement(By.xpath("//*[text()='LOGIN']"));
-        loginBtn.click();
+        int i = (int)(System.currentTimeMillis()/1000)%3600;
 
-        WebElement emailInput= wd.findElement(By.xpath("//input[1]"));
-        emailInput.click();
-        emailInput.clear();
-        emailInput.sendKeys("noa+2@gmail.com");
+        String email = "Suren"+i+"@gmail.com";
+        String password="Nnoa12345$";
 
-        WebElement passwordInput = wd.findElement(By.xpath("//input[2]"));
-        passwordInput.click();
-        passwordInput.clear();
-        passwordInput.sendKeys("Nnoa12345$");
-
-        wd.findElement(By.xpath("//button[2]")).click();
+        System.out.println("Email: "+email);
 
 
+        openLoginRegistrationForm();
+        fillLoginRegistrationForm(email,password);
+        submitRegistration();
+        Assert.assertTrue(isElementPresent(By.xpath("//button[text()='Sign Out']")));
 
     }
 
-    @AfterMethod
-    public void tearDown(){
 
-        //wd.quit();
+    @Test
+public void WrongRegistrationEmail(){
+    int i = (int)(System.currentTimeMillis()/1000)%3600;
+
+    String email = "Suren"+i+"gmail.com", password="Nnoa12345$";
+
+    System.out.println("Email: "+email);
+
+        openLoginRegistrationForm();
+        fillLoginRegistrationForm(email,password);
+        submitRegistration();
+        Assert.assertFalse(isElementPresent(By.xpath("//button[text()='Sign Out']")));
+
     }
 
 

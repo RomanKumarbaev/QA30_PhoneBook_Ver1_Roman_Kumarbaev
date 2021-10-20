@@ -1,23 +1,13 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest {
-    WebDriver wd;
 
 
-    @BeforeMethod
-    public void init(){
-        wd = new ChromeDriver();
+public class LoginTest extends TestBase {
 
-        wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
 
-    }
 
     @Test
     public void LoginPositiveTest(){
@@ -31,29 +21,38 @@ public class LoginTest {
         emailInput.clear();
         emailInput.sendKeys("noa@gmail.com");
 
-        WebElement passwordInput = wd.findElement(By.xpath("//input[1]"));
+        WebElement passwordInput = wd.findElement(By.xpath("//input[2]"));
         passwordInput.click();
         passwordInput.clear();
         passwordInput.sendKeys("Nnoa12345$");
 
-        wd.findElement(By.xpath("//button[2]")).click();
+        wd.findElement(By.xpath("//button[1]")).click();
 
-        //wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
+        Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0);
 
-
-        //Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0);
-
-
-
-
+        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
 
     }
 
-    @AfterMethod
-    public void tearDown(){
+    @Test
+    public void LoginTest2(){
+        String email = "noa@gmail.com";
+        String password = "Nnoa12345$";
 
-       //wd.quit();
+
+        openLoginRegistrationForm();
+
+        fillLoginRegistrationForm(email, password);
+
+        submitLogin();
+
+        pause(5000);
+
+        Assert.assertTrue(isElementPresent(By.xpath("//button[text()='Sign Out']")));
+
     }
+
+
 
 
 }
