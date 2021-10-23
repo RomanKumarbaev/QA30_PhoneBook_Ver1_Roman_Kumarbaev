@@ -26,18 +26,34 @@ public class TestBase {
        // wd.quit();
     }
 
+    // HomeWork
+    public boolean isLogged(){
+        return wd.findElements(By.xpath("//button[text()='Sign Out']")).size()>0;
+
+    }
+    // HomeWork
+
+
+    public void  logOut(){
+
+        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
+    }
+
 
     public boolean isElementPresent(By locator) {
 
         return wd.findElements(locator).size()>0;
-
-
     }
+
+
+
 
     public void submitRegistration() {
         click(By.xpath("//button[2]"));
 
     }
+
+
 
     public void fillLoginRegistrationForm(String email, String password) {
         type(By.xpath("//input[1]"),email);
