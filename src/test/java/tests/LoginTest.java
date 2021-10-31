@@ -1,6 +1,6 @@
 package tests;
 
-import org.testng.Assert;
+import models.User;
 import org.testng.annotations.Test;
 
 
@@ -34,20 +34,24 @@ public class LoginTest extends TestBase {
 
     @Test
     public void LoginTest2() {
-        String email = "noa@gmail.com";
-        String password = "Nnoa12345$";
+//        String email = "noa@gmail.com";
+//        String password = "Nnoa12345$";
+
+        User user = new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$");
 
 
         app.getUser().openLoginRegistrationForm();
 
-        app.getUser().fillLoginRegistrationForm(email, password);
+        //app.getUser().fillLoginRegistrationForm(email, password);
 
+        app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().pause(5000);
         app.getUser().submitLogin();
 
         app.getUser().pause(5000);
 
 //        Assert.assertTrue(isElementPresent(By.xpath("//button[text()='Sign Out']")));
-        Assert.assertTrue(app.getUser().isLogged());
+        //Assert.assertTrue(app.getUser().isLogged());
 
     }
 
