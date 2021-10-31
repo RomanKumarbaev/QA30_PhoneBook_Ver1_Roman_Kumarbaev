@@ -24,7 +24,7 @@ public class RegestrationTest extends TestBase {
 
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
 
-        User user = new User().withEmail("Suren"+i+"@gmail.com").withPassword("Nnoa12345$");
+        User user = new User().withEmail("Suren" + i + "@gmail.com").withPassword("Nnoa12345$");
 
 //        String email = "Suren" + i + "@gmail.com";
 //        String password = "Nnoa12345$";
@@ -49,11 +49,9 @@ public class RegestrationTest extends TestBase {
     public void WrongRegistrationEmail() {
 
 
-
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
 
-        User user = new User().withEmail("Suren"+i+"gmail.com").withPassword("Nnoa12345$");
-
+        User user = new User().withEmail("Suren" + i + "gmail.com").withPassword("Nnoa12345$");
 
 
 //        String email = "Suren" + i + "gmail.com", password = "Nnoa12345$";
@@ -63,8 +61,7 @@ public class RegestrationTest extends TestBase {
         app.getUser().fillLoginRegistrationForm(user);
 
         app.getUser().openLoginRegistrationForm();
-      //  app.getUser().fillLoginRegistrationForm(email, password);
-
+        //  app.getUser().fillLoginRegistrationForm(email, password);
 
 
         app.getUser().submitRegistration();
