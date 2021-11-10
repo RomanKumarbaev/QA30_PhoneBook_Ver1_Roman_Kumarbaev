@@ -23,11 +23,14 @@ public class RegestrationTest extends TestBase {
     public void RegistrationPositiveTest() {
 
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
+        String email = "Suren" + i + "@gmail.com";
+     String password = "Nnoa12345$";
 
         User user = new User().withEmail("Suren" + i + "@gmail.com").withPassword("Nnoa12345$");
 
-//        String email = "Suren" + i + "@gmail.com";
-//        String password = "Nnoa12345$";
+        logger.info("Test Regestration Positive starts with email>>>>"+ email);
+        logger.info("Test Regestration Positive starts with password>>>>"+password);
+
 
 
         //System.out.println("Email: " + email);

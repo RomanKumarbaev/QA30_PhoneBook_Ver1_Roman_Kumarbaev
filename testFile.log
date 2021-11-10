@@ -1,0 +1,12 @@
+2564 [Test worker] INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+13388 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with email>>>>Suren1959@gmail.com
+13389 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with password>>>>Nnoa12345$
+14643 [Test worker] INFO  manager.ApplicationManager - Tests passed
+2502 [Test worker] INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+13584 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with email>>>>Suren2050@gmail.com
+13584 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with password>>>>Nnoa12345$
+14775 [Test worker] INFO  manager.ApplicationManager - Tests passed
+2612 [Test worker] INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+13593 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with email>>>>Suren2164@gmail.com
+13593 [Test worker] INFO  tests.TestBase - Test Regestration Positive starts with password>>>>Nnoa12345$
+14719 [Test worker] INFO  manager.ApplicationManager - Tests passed
