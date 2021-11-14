@@ -45,12 +45,12 @@ public class HelperUser extends HelperBase {
     }
 
 
-    // HomeWork
+
     public boolean isLogged() {
         return wd.findElements(By.xpath("//button[text()='Sign Out']")).size() > 0;
 
     }
-    // HomeWork
+
 
 
     public void logOut() {

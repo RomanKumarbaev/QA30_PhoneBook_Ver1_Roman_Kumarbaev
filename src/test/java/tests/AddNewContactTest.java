@@ -38,6 +38,7 @@ public class AddNewContactTest extends TestBase{
         app.getAddNewContact().openAddForm();
         app.getAddNewContact().fillAddForm(addNewContact);
         app.getAddNewContact().submitAdd();
+
         app.getAddNewContact().pause(2000);
 
         Assert.assertTrue(app.getAddNewContact().isContactAdd());
@@ -47,7 +48,9 @@ public class AddNewContactTest extends TestBase{
     public void postCondition(){
 
         app.getAddNewContact().deleteContact(number);
+
         app.getAddNewContact().pause(500);
+
         Assert.assertTrue(app.getAddNewContact().isDeletedContact(number));
 
     }

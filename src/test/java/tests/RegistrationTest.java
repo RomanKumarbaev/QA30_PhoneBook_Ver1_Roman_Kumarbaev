@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class RegestrationTest extends TestBase {
+public class RegistrationTest extends TestBase {
 
 
     @BeforeMethod
@@ -24,25 +24,17 @@ public class RegestrationTest extends TestBase {
 
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         String email = "Suren" + i + "@gmail.com";
-     String password = "Nnoa12345$";
+        String password = "Nnoa12345$";
 
         User user = new User().withEmail("Suren" + i + "@gmail.com").withPassword("Nnoa12345$");
 
-        logger.info("Test Regestration Positive starts with email>>>>"+ email);
-        logger.info("Test Regestration Positive starts with password>>>>"+password);
+        logger.info("Test Registration Positive starts with email>>>>" + email);
+        logger.info("Test Registration Positive starts with password>>>>" + password);
 
-
-
-        //System.out.println("Email: " + email);
 
         app.getUser().openLoginRegistrationForm();
-
-        //app.getUser().fillLoginRegistrationForm(email, password);
-
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
-
-        // Assert.assertTrue(isElementPresent(By.xpath("//button[text()='Sign Out']")));
 
         Assert.assertTrue(app.getUser().isLogged());
     }
@@ -57,24 +49,13 @@ public class RegestrationTest extends TestBase {
         User user = new User().withEmail("Suren" + i + "gmail.com").withPassword("Nnoa12345$");
 
 
-//        String email = "Suren" + i + "gmail.com", password = "Nnoa12345$";
-//
-//        System.out.println("Email: " + email);
-
         app.getUser().fillLoginRegistrationForm(user);
-
         app.getUser().openLoginRegistrationForm();
-        //  app.getUser().fillLoginRegistrationForm(email, password);
-
-
         app.getUser().submitRegistration();
-        //Assert.assertFalse(isElementPresent(By.xpath("//button[text()='Sign Out']")));
-        //Assert.assertFalse(app.getUser().isLogged());
 
         app.getUser().pause(5000);
 
         Assert.assertTrue(app.getUser().isErrorMessageWrongFormat());
-
         Assert.assertTrue(app.getUser().isAlertPresent());
     }
 

@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class HelperAddNewContact extends HelperBase {
+public class ContactHelper extends HelperBase {
 
-    public HelperAddNewContact(WebDriver wd) {
+    public ContactHelper(WebDriver wd) {
         super(wd);
     }
 
