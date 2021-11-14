@@ -1,0 +1,4 @@
+11:15:42  INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+11:15:53  INFO  tests.TestBase - Test Regestration Positive starts with email>>>>Suren953@gmail.com
+11:15:53  INFO  tests.TestBase - Test Regestration Positive starts with password>>>>Nnoa12345$
+11:15:54  INFO  manager.ApplicationManager - Tests passed
