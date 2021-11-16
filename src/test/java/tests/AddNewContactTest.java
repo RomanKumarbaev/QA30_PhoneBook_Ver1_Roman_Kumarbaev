@@ -8,9 +8,7 @@ import org.testng.annotations.Test;
 
 public class AddNewContactTest extends TestBase{
 
-    int i=(int)((System.currentTimeMillis()/1000)%3600);
-    String email = String.format("vika%d@gmai.com",i);
-    String number = String.format("%d5%d",i,i) ;
+
 
 
     @BeforeMethod
@@ -22,9 +20,12 @@ public class AddNewContactTest extends TestBase{
     }
 
 
-    @Test
+    @Test (invocationCount = 6)
     public void addNewContactPositiveTest(){
 
+        int i=(int)((System.currentTimeMillis()/1000)%3600);
+        String email = String.format("vika%d@gmai.com",i);
+        String number = String.format("%d5%d",i,i) ;
 
 
         AddNewContact addNewContact= AddNewContact.builder()
@@ -39,20 +40,10 @@ public class AddNewContactTest extends TestBase{
         app.getAddNewContact().fillAddForm(addNewContact);
         app.getAddNewContact().submitAdd();
 
-        app.getAddNewContact().pause(2000);
-
         Assert.assertTrue(app.getAddNewContact().isContactAdd());
-    }
-
-    @AfterMethod
-    public void postCondition(){
-
-        app.getAddNewContact().deleteContact(number);
-
-        app.getAddNewContact().pause(500);
-
-        Assert.assertTrue(app.getAddNewContact().isDeletedContact(number));
 
     }
+
+
 
 }

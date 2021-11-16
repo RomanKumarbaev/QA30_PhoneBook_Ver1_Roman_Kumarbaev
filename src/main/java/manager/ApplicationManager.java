@@ -18,6 +18,8 @@ public class ApplicationManager {
     HelperUser user;
     ContactHelper addNewContact;
 
+    DeleteContactsHelper deleteContact;
+
 
     public void init() {
 
@@ -29,11 +31,13 @@ public class ApplicationManager {
         //wd.manage().window().maximize();
         wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
 
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 
         user = new HelperUser(wd);
 
         addNewContact = new ContactHelper(wd);
+
+        deleteContact = new DeleteContactsHelper(wd);
 
         wd.register(new MyListener());
 
@@ -50,5 +54,9 @@ public class ApplicationManager {
 
     public ContactHelper getAddNewContact() {
         return addNewContact;
+    }
+
+    public DeleteContactsHelper getDeleteContact() {
+        return deleteContact;
     }
 }

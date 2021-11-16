@@ -1,0 +1,53 @@
+13:45:46  INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+13:45:46  INFO  tests.TestBase - Start Test --> deleteAllContactsPositiveTest
+13:45:46  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[.='LOGIN']
+13:45:46  INFO  manager.MyListener - The element with locator --> By.xpath: //a[.='LOGIN'] was found
+13:45:46  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[text()='LOGIN']
+13:45:46  INFO  manager.MyListener - The element with locator --> By.xpath: //a[text()='LOGIN'] was found
+13:45:47  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[1]
+13:45:47  INFO  manager.MyListener - The element with locator --> By.xpath: //input[1] was found
+13:45:47  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[2]
+13:45:47  INFO  manager.MyListener - The element with locator --> By.xpath: //input[2] was found
+13:45:47  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[1]
+13:45:47  INFO  manager.MyListener - The element with locator --> By.xpath: //button[1] was found
+13:45:47  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[.='CONTACTS']
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //a[.='CONTACTS'] was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[.='Remove']
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //button[.='Remove'] was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[.='Remove']
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //button[.='Remove'] was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //h3
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //h3 was found
+13:45:48  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[.='Remove']
+13:45:48  INFO  manager.MyListener - The element with locator --> By.xpath: //button[.='Remove'] was found
+13:45:48  INFO  manager.MyListener - Somthing went wrong ! ! ! !
+13:45:48  INFO  manager.MyListener - stale element reference: element is not attached to the page document
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ROMAN', ip: '192.168.1.186', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\COMP~1.ROM\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52862}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9088e2c8efc040741c7082adac16fb30
+13:45:48  INFO  manager.MyListener - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ROMAN', ip: '192.168.1.186', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\COMP~1.ROM\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52862}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9088e2c8efc040741c7082adac16fb30
+13:45:48  INFO  manager.MyListener - This link to screenshot with error ----> src/test/screenshots/screenshots-2748.png
+13:45:48  INFO  tests.TestBase - ***************************************************

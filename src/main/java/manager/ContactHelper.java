@@ -85,21 +85,5 @@ public class ContactHelper extends HelperBase {
 
     }
 
-    public void deleteContact(String number) {
 
-        String obj = String.format("//h3[.='%s']",number);
-
-        click(By.xpath(obj));
-        click(By.xpath("//button[.='Remove']"));
-
-    }
-
-    public boolean isDeletedContact(String number) {
-        String obj = String.format("//h3[.='%s']",number);
-        if(wd.findElements(By.xpath(obj)).size()<1){
-            return true;
-        }else
-            return false;
-
-    }
 }
