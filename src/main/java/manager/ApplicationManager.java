@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
+
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
    // WebDriver wd;
@@ -18,7 +19,7 @@ public class ApplicationManager {
     HelperUser user;
     ContactHelper addNewContact;
 
-    DeleteContactsHelper deleteContact;
+
 
 
     public void init() {
@@ -37,7 +38,7 @@ public class ApplicationManager {
 
         addNewContact = new ContactHelper(wd);
 
-        deleteContact = new DeleteContactsHelper(wd);
+
 
         wd.register(new MyListener());
 
@@ -52,11 +53,9 @@ public class ApplicationManager {
         return user;
     }
 
-    public ContactHelper getAddNewContact() {
+    public ContactHelper getContact() {
         return addNewContact;
     }
 
-    public DeleteContactsHelper getDeleteContact() {
-        return deleteContact;
-    }
+
 }

@@ -1,0 +1,35 @@
+00:16:52  INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+00:16:53  INFO  tests.TestBase - Start Test --> addNewContactPositiveTest
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[.='LOGIN']
+00:16:53  INFO  manager.MyListener - The element with locator --> By.xpath: //a[.='LOGIN'] was found
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[text()='LOGIN']
+00:16:53  INFO  manager.MyListener - The element with locator --> By.xpath: //a[text()='LOGIN'] was found
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[1]
+00:16:53  INFO  manager.MyListener - The element with locator --> By.xpath: //input[1] was found
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[2]
+00:16:53  INFO  manager.MyListener - The element with locator --> By.xpath: //input[2] was found
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[1]
+00:16:53  INFO  manager.MyListener - The element with locator --> By.xpath: //button[1] was found
+00:16:53  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
+00:16:54  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[.='ADD']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //a[.='ADD'] was found
+00:16:54  INFO  manager.MyListener - Start search element by locator -->By.xpath: //div[@class='add_form__2rsm2']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //div[@class='add_form__2rsm2'] was found
+00:16:54  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='Name']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='Name'] was found
+00:16:54  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='Last Name']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='Last Name'] was found
+00:16:54  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='Phone']
+00:16:54  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='Phone'] was found
+00:16:55  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='email']
+00:16:55  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='email'] was found
+00:16:55  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='Address']
+00:16:55  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='Address'] was found
+00:16:55  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[@placeholder='description']
+00:16:55  INFO  manager.MyListener - The element with locator --> By.xpath: //input[@placeholder='description'] was found
+00:16:55  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[.='Save']
+00:16:55  INFO  manager.MyListener - The element with locator --> By.xpath: //button[.='Save'] was found
+00:16:55  INFO  manager.MyListener - Start search element by locator -->By.xpath: //div[@class='contact-page_leftdiv__yhyke']
+00:16:55  INFO  manager.MyListener - The element with locator --> By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
+00:16:55  INFO  tests.TestBase - ***************************************************

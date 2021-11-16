@@ -9,8 +9,9 @@ public class DeleteContactsTest extends TestBase{
     @BeforeMethod
     public void precondition(){
 
-        if (app.getAddNewContact().isLogOut()){
-            app.getAddNewContact().logIn();
+
+        if (app.getContact().isLogOut()){
+            app.getContact().logIn();
         }
     }
 
@@ -18,24 +19,28 @@ public class DeleteContactsTest extends TestBase{
     @Test
     public void deleteOneContact(){
 
-        app.getDeleteContact().openContactForm();
 
-        app.getDeleteContact().deleteOneContact();
 
-        app.getDeleteContact().pause(2000);
+        app.getContact().openContactForm();
+
+        app.getContact().deleteOneContact();
+
+        app.getContact().pause(2000);
+
+        Assert.assertTrue(app.getContact().isDeleteOneContact(app.getContact().res));
 
     }
 
     @Test
     public void deleteAllContactsPositiveTest(){
 
-        app.getDeleteContact().openContactForm();
+        app.getContact().openContactForm();
 
-        app.getDeleteContact().deleteAllContacts();
+        app.getContact().deleteAllContacts();
 
-        app.getDeleteContact().pause(2000);
+        app.getContact().pause(2000);
 
-        Assert.assertTrue(app.getDeleteContact().allContactsIsDelete());
+        Assert.assertTrue(app.getContact().allContactsIsDelete());
     }
 
 

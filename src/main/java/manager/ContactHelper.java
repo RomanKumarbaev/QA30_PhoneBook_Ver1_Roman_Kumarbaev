@@ -11,6 +11,74 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
+    public boolean res;
+
+    public void openContactForm() {
+
+        click(By.xpath("//a[.='CONTACTS']"));
+    }
+
+    public void deleteAllContacts() {
+
+        if (!isContactHave()){
+
+            while (wd.findElements(By.xpath("//h3")).size()>0){
+
+                pause(500);
+                click(By.xpath("//h3"));
+                pause(500);
+                click(By.xpath("//button[2]"));
+                pause(500);
+
+                if(isContactHave()){
+                    break;
+                }
+
+
+            }}
+    }
+
+    public boolean allContactsIsDelete() {
+        if(wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size()>0){
+            return true;
+        }else
+            return false;
+    }
+
+    public void deleteOneContact() {
+        int a, b;
+
+
+
+        a=wd.findElements(By.xpath("//h3")).size();
+
+        if(!isContactHave()){
+
+            click(By.xpath("//h3"));
+            pause(500);
+            click(By.xpath("//button[2]"));
+            pause(500);
+        }
+
+        b= wd.findElements(By.xpath("//h3")).size();
+
+        if (a==b+1 || a==0 ){
+            res=true;
+        } else {res=false;}
+
+    }
+
+    public boolean isContactHave() {
+        if(wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size()>0){
+
+            return true;
+        } else return false;
+
+    }
+
+    public boolean isDeleteOneContact(boolean res) {
+        return res;
+    }
 
     public boolean isLogOut() {
         return wd.findElements(By.xpath("//a[.='LOGIN']")).size() > 0;
