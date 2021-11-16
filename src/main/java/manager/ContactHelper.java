@@ -20,9 +20,9 @@ public class ContactHelper extends HelperBase {
 
     public void deleteAllContacts() {
 
-        if (!isContactHave()){
+        if (!isContactHave()) {
 
-            while (wd.findElements(By.xpath("//h3")).size()>0){
+            while (wd.findElements(By.xpath("//h3")).size() > 0) {
 
                 pause(500);
                 click(By.xpath("//h3"));
@@ -30,18 +30,19 @@ public class ContactHelper extends HelperBase {
                 click(By.xpath("//button[2]"));
                 pause(500);
 
-                if(isContactHave()){
+                if (isContactHave()) {
                     break;
                 }
 
 
-            }}
+            }
+        }
     }
 
     public boolean allContactsIsDelete() {
-        if(wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size()>0){
+        if (wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size() > 0) {
             return true;
-        }else
+        } else
             return false;
     }
 
@@ -49,10 +50,9 @@ public class ContactHelper extends HelperBase {
         int a, b;
 
 
+        a = wd.findElements(By.xpath("//h3")).size();
 
-        a=wd.findElements(By.xpath("//h3")).size();
-
-        if(!isContactHave()){
+        if (!isContactHave()) {
 
             click(By.xpath("//h3"));
             pause(500);
@@ -60,16 +60,18 @@ public class ContactHelper extends HelperBase {
             pause(500);
         }
 
-        b= wd.findElements(By.xpath("//h3")).size();
+        b = wd.findElements(By.xpath("//h3")).size();
 
-        if (a==b+1 || a==0 ){
-            res=true;
-        } else {res=false;}
+        if (a == b + 1 || a == 0) {
+            res = true;
+        } else {
+            res = false;
+        }
 
     }
 
     public boolean isContactHave() {
-        if(wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size()>0){
+        if (wd.findElements(By.xpath("//div[@class='contact-page_message__2qafk']")).size() > 0) {
 
             return true;
         } else return false;
@@ -89,7 +91,7 @@ public class ContactHelper extends HelperBase {
         String password = "Nnoa12345$";
 
         openLogInForm();
-        fillLogInForm(email,password);
+        fillLogInForm(email, password);
         submitLogin();
 
         Assert.assertTrue(wd.findElements(By.xpath("//button[text()='Sign Out']")).size() > 0);
@@ -116,8 +118,8 @@ public class ContactHelper extends HelperBase {
 
     public void fillAddForm(AddNewContact addNewContact) {
 
-        if(isFormAddPresent()){
-            type(By.xpath("//input[@placeholder='Name']"),addNewContact.getName());
+        if (isFormAddPresent()) {
+            type(By.xpath("//input[@placeholder='Name']"), addNewContact.getName());
             type(By.xpath("//input[@placeholder='Last Name']"), addNewContact.getLastname());
             type(By.xpath("//input[@placeholder='Phone']"), addNewContact.getPhone());
             type(By.xpath("//input[@placeholder='email']"), addNewContact.getEmail());
@@ -129,10 +131,10 @@ public class ContactHelper extends HelperBase {
     }
 
     private boolean isFormAddPresent() {
-    if (wd.findElements(By.xpath("//div[@class='add_form__2rsm2']")).size()>0){
-        return true;
-    }else
-        return false;
+        if (wd.findElements(By.xpath("//div[@class='add_form__2rsm2']")).size() > 0) {
+            return true;
+        } else
+            return false;
 
     }
 
@@ -149,7 +151,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public boolean isContactAdd() {
- return wd.findElements(By.xpath("//div[@class='contact-page_leftdiv__yhyke']")).size()>0;
+        return wd.findElements(By.xpath("//div[@class='contact-page_leftdiv__yhyke']")).size() > 0;
 
     }
 
