@@ -11,7 +11,6 @@ public class HelperBase {
     WebDriver wd;
 
 
-
     public HelperBase(WebDriver wd) {
         this.wd = wd;
     }
@@ -22,7 +21,7 @@ public class HelperBase {
     }
 
     public void type(By locator, String text) {
-        if (text != null && !text.isEmpty() ) {
+        if (text != null && !text.isEmpty()) {
             WebElement element = wd.findElement(locator);
             element.click();
             element.clear();
@@ -46,16 +45,16 @@ public class HelperBase {
         }
     }
 
-    public void takeScreenshot(String link){
+    public void takeScreenshot(String link) {
 
         File tmp = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
 
         File screenshot = new File(link);
 
-        try{
-            Files.copy(tmp,screenshot);
+        try {
+            Files.copy(tmp, screenshot);
 
-    }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

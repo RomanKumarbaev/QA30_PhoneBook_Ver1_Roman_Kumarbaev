@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 
 public class MyListener extends AbstractWebDriverEventListener {
 
-    Logger  logger = LoggerFactory.getLogger(MyListener.class);
+    Logger logger = LoggerFactory.getLogger(MyListener.class);
 
-    public MyListener(){
+    public MyListener() {
         super();
     }
 
@@ -21,14 +21,14 @@ public class MyListener extends AbstractWebDriverEventListener {
 
         System.out.println("hello");
 
-        logger.info("Start search element by locator -->"+ by);
+        logger.info("Start search element by locator -->" + by);
     }
 
     @Override
     public void afterFindBy(By by, WebElement element, WebDriver driver) {
         super.afterFindBy(by, element, driver);
 
-        logger.info("The element with locator --> "+by+" was found");
+        logger.info("The element with locator --> " + by + " was found");
 
     }
 
@@ -42,15 +42,14 @@ public class MyListener extends AbstractWebDriverEventListener {
 
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
 
-        String link = "src/test/screenshots/screenshots-"+i+".png";
+        String link = "src/test/screenshots/screenshots-" + i + ".png";
 
         HelperBase helperBase = new HelperBase(driver);
         helperBase.takeScreenshot(link);
-        logger.info("This link to screenshot with error ----> "+link);
+        logger.info("This link to screenshot with error ----> " + link);
 
 
     }
-
 
 
 }

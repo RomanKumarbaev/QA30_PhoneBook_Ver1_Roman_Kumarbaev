@@ -17,7 +17,6 @@ public class TestBase {
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
 
-
     @BeforeSuite
     public void setUp() {
 
@@ -32,14 +31,14 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void startLogger(Method method){
+    public void startLogger(Method method) {
 
-        logger.info("Start Test --> "+method.getName());
+        logger.info("Start Test --> " + method.getName());
 
     }
 
     @AfterMethod
-    public void end(){
+    public void end() {
         logger.info("***************************************************");
     }
 

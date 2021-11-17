@@ -12,14 +12,12 @@ public class ApplicationManager {
 
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
-   // WebDriver wd;
+    // WebDriver wd;
 
     EventFiringWebDriver wd;
 
     HelperUser user;
     ContactHelper addNewContact;
-
-
 
 
     public void init() {
@@ -37,7 +35,6 @@ public class ApplicationManager {
         user = new HelperUser(wd);
 
         addNewContact = new ContactHelper(wd);
-
 
 
         wd.register(new MyListener());
