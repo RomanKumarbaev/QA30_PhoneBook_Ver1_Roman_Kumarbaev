@@ -10,7 +10,7 @@ public class AddNewContactTest extends TestBase{
 
 
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void precondition(){
 
         if (app.getContact().isLogOut()){
@@ -19,7 +19,7 @@ public class AddNewContactTest extends TestBase{
     }
 
 
-    @Test (invocationCount = 3)
+    @Test (invocationCount = 1,groups = {"web","smoke"})
     public void addNewContactPositiveTest(){
 
         int i=(int)((System.currentTimeMillis()/1000)%3600);

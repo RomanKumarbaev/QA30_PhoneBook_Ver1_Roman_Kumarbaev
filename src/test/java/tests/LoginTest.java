@@ -2,6 +2,7 @@ package tests;
 
 import models.User;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 
@@ -10,7 +11,7 @@ public class LoginTest extends TestBase {
 
 
 
-    @Test
+    @Test (groups = {"web"})
     public void LoginTest2() {
         String email = "noa@gmail.com";
         String password = "Nnoa12345$";
@@ -21,8 +22,6 @@ public class LoginTest extends TestBase {
         app.getUser().pause(5000);
 
         app.getUser().submitLogin();
-
-        app.getUser().pause(5000);
 
         Assert.assertTrue(app.getUser().isLogged());
 
@@ -46,6 +45,12 @@ public class LoginTest extends TestBase {
         app.getUser().pause(5000);
 
         Assert.assertTrue(app.getUser().isLogged());
+
+    }
+
+    @AfterMethod
+    public void postCondition(){
+        app.getUser().logOut();
 
     }
 

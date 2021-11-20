@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class RegistrationTest extends TestBase {
 
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void preCondition() {
 
         if (app.getUser().isLogged()) {
@@ -19,7 +19,7 @@ public class RegistrationTest extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = {"web"})
     public void RegistrationPositiveTest() {
 
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
