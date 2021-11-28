@@ -19,7 +19,7 @@ public class AddNewContactTest extends TestBase{
     }
 
 
-    @Test (invocationCount = 1,groups = {"web","smoke"})
+    @Test (invocationCount = 3,groups = {"web","smoke"})
     public void addNewContactPositiveTest(){
 
         int i=(int)((System.currentTimeMillis()/1000)%3600);
