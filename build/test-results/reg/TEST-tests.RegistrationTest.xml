@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.RegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T18:58:12" hostname="ROMAN" time="1.107">
+<testsuite name="tests.RegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T20:04:39" hostname="ROMAN" time="1.119">
   <properties/>
-  <testcase name="RegistrationPositiveTest" classname="tests.RegistrationTest" time="1.107"/>
-  <system-out><![CDATA[20:58:12  INFO  tests.TestBase - Start Test --> RegistrationPositiveTest
+  <testcase name="RegistrationPositiveTest" classname="tests.RegistrationTest" time="1.119"/>
+  <system-out><![CDATA[22:04:39  INFO  tests.TestBase - Start Test --> RegistrationPositiveTest
 hello
-20:58:12  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
-20:58:12  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
+22:04:39  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
+22:04:39  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
 hello
-20:58:12  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
-20:58:12  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
-20:58:12  INFO  tests.TestBase - Test Registration Positive starts with email>>>>Suren3492@gmail.com
-20:58:12  INFO  tests.TestBase - Test Registration Positive starts with password>>>>Nnoa12345$
+22:04:39  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
+22:04:39  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
+22:04:39  INFO  tests.TestBase - Test Registration Positive starts with email>>>>Suren279@gmail.com
+22:04:39  INFO  tests.TestBase - Test Registration Positive starts with password>>>>Nnoa12345$
 hello
-20:58:12  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[text()='LOGIN']
-20:58:12  INFO  manager.MyListener - The element with locator --> By.xpath: //a[text()='LOGIN'] was found
+22:04:39  INFO  manager.MyListener - Start search element by locator -->By.xpath: //a[text()='LOGIN']
+22:04:39  INFO  manager.MyListener - The element with locator --> By.xpath: //a[text()='LOGIN'] was found
 hello
-20:58:12  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[1]
-20:58:12  INFO  manager.MyListener - The element with locator --> By.xpath: //input[1] was found
+22:04:40  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[1]
+22:04:40  INFO  manager.MyListener - The element with locator --> By.xpath: //input[1] was found
 hello
-20:58:13  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[2]
-20:58:13  INFO  manager.MyListener - The element with locator --> By.xpath: //input[2] was found
+22:04:40  INFO  manager.MyListener - Start search element by locator -->By.xpath: //input[2]
+22:04:40  INFO  manager.MyListener - The element with locator --> By.xpath: //input[2] was found
 hello
-20:58:13  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[2]
-20:58:13  INFO  manager.MyListener - The element with locator --> By.xpath: //button[2] was found
+22:04:40  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[2]
+22:04:40  INFO  manager.MyListener - The element with locator --> By.xpath: //button[2] was found
 hello
-20:58:13  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
-20:58:13  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
-20:58:13  INFO  tests.TestBase - ***************************************************
+22:04:41  INFO  manager.MyListener - Start search element by locator -->By.xpath: //button[text()='Sign Out']
+22:04:41  INFO  manager.MyListener - The element with locator --> By.xpath: //button[text()='Sign Out'] was found
+22:04:41  INFO  tests.TestBase - ***************************************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

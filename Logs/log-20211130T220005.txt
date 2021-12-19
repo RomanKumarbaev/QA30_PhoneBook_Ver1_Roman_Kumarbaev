@@ -1,0 +1,11 @@
+22:00:05  INFO  manager.ApplicationManager - Tests starts on Chrome Driver
+22:00:09  INFO  tests.TestBase - Start Test --> LoginTest2
+22:00:09  INFO  tests.TestBase - ***************************************************
+22:00:09  INFO  tests.TestBase - Start Test --> addNewContactPositiveTest
+22:00:09  INFO  tests.TestBase - ***************************************************
+22:00:09  INFO  tests.TestBase - Start Test --> addNewContactPositiveTest
+22:00:09  INFO  tests.TestBase - ***************************************************
+22:00:09  INFO  tests.TestBase - Start Test --> addNewContactPositiveTest
+22:00:09  INFO  tests.TestBase - ***************************************************
+22:00:09  INFO  tests.TestBase - Start Test --> RegistrationPositiveTest
+22:00:09  INFO  tests.TestBase - ***************************************************

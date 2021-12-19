@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">7.444s</div>
+<div class="counter">11.433s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">66%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,85 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="addNewContactPositiveTest"></a>
+<h3 class="failures">addNewContactPositiveTest</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at tests.AddNewContactTest.addNewContactPositiveTest(AddNewContactTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -79,129 +151,129 @@
 </thead>
 <tr>
 <td class="success">addNewContactPositiveTest</td>
-<td class="success">2.358s</td>
+<td class="success">2.615s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">addNewContactPositiveTest</td>
-<td class="success">2.686s</td>
-<td class="success">passed</td>
+<td class="failures">addNewContactPositiveTest</td>
+<td class="failures">6.350s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">addNewContactPositiveTest</td>
-<td class="success">2.400s</td>
+<td class="success">2.468s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:57:52  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
+<pre>22:04:16  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
 hello
-20:57:52  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
-20:57:56  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
+22:04:16  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
+22:04:20  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
 hello
-20:57:56  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
-20:57:56  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
+22:04:20  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
+22:04:20  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
 hello
-20:57:57  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
-20:57:57  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
+22:04:20  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
+22:04:20  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
 hello
-20:57:57  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
-20:57:57  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
+22:04:20  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
+22:04:20  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
 hello
-20:57:57  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
-20:57:57  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
+22:04:20  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
+22:04:20  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
 hello
-20:57:57  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
-20:57:57  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
+22:04:21  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
+22:04:21  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
 hello
-20:57:58  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
-20:57:58  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
+22:04:21  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
+22:04:21  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
 hello
-20:57:58  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
-20:57:58  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
+22:04:21  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
+22:04:21  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
 hello
-20:57:58  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
-20:57:58  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
+22:04:21  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
+22:04:21  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
 hello
-20:57:58  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
-20:57:58  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
+22:04:22  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
+22:04:22  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
 hello
-20:57:59  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
-20:57:59  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
-20:57:59  INFO  tests.TestBase - ***************************************************
-20:57:59  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
+22:04:22  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
+22:04:22  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
+22:04:22  INFO  tests.TestBase - ***************************************************
+22:04:22  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
 hello
-20:57:59  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
-20:58:03  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
+22:04:22  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
+22:04:26  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
 hello
-20:58:03  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
-20:58:03  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
+22:04:26  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
+22:04:26  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
 hello
-20:58:03  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
-20:58:03  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
+22:04:27  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
+22:04:27  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
 hello
-20:58:03  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
-20:58:03  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
+22:04:27  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
+22:04:27  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
 hello
-20:58:04  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
-20:58:04  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
+22:04:27  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
+22:04:27  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
 hello
-20:58:04  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
-20:58:04  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
+22:04:27  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
+22:04:27  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
 hello
-20:58:04  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
-20:58:04  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
+22:04:27  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
+22:04:28  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
 hello
-20:58:05  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
-20:58:05  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
+22:04:28  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
+22:04:28  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
 hello
-20:58:05  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
-20:58:05  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
+22:04:28  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
+22:04:28  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
 hello
-20:58:05  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
-20:58:05  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
+22:04:28  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
+22:04:28  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
 hello
-20:58:05  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
-20:58:05  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
-20:58:05  INFO  tests.TestBase - ***************************************************
-20:58:05  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
+22:04:29  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
+22:04:29  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
+22:04:29  INFO  tests.TestBase - ***************************************************
+22:04:29  INFO  tests.TestBase - Start Test --&gt; addNewContactPositiveTest
 hello
-20:58:05  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
-20:58:09  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
+22:04:29  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='LOGIN']
+22:04:33  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='LOGIN'] was found
 hello
-20:58:09  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
-20:58:09  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
+22:04:33  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //a[.='ADD']
+22:04:33  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //a[.='ADD'] was found
 hello
-20:58:10  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
-20:58:10  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
+22:04:33  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='add_form__2rsm2']
+22:04:33  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='add_form__2rsm2'] was found
 hello
-20:58:10  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
-20:58:10  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
+22:04:33  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Name']
+22:04:33  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Name'] was found
 hello
-20:58:10  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
-20:58:10  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
+22:04:33  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Last Name']
+22:04:33  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Last Name'] was found
 hello
-20:58:10  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
-20:58:10  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
+22:04:34  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Phone']
+22:04:34  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Phone'] was found
 hello
-20:58:11  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
-20:58:11  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
+22:04:34  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='email']
+22:04:34  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='email'] was found
 hello
-20:58:11  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
-20:58:11  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
+22:04:34  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='Address']
+22:04:34  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='Address'] was found
 hello
-20:58:11  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
-20:58:11  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
+22:04:35  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //input[@placeholder='description']
+22:04:35  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //input[@placeholder='description'] was found
 hello
-20:58:11  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
-20:58:11  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
+22:04:35  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //button[.='Save']
+22:04:35  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //button[.='Save'] was found
 hello
-20:58:12  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
-20:58:12  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
-20:58:12  INFO  tests.TestBase - ***************************************************
+22:04:35  INFO  manager.MyListener - Start search element by locator --&gt;By.xpath: //div[@class='contact-page_leftdiv__yhyke']
+22:04:39  INFO  manager.MyListener - The element with locator --&gt; By.xpath: //div[@class='contact-page_leftdiv__yhyke'] was found
+22:04:39  INFO  tests.TestBase - ***************************************************
 </pre>
 </span>
 </div>
@@ -213,7 +285,7 @@ hello
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 30 нояб. 2021 г., 20:58:14</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 30 нояб. 2021 г., 22:04:41</p>
 </div>
 </div>
 </body>

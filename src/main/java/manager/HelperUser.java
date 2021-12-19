@@ -35,7 +35,7 @@ public class HelperUser extends HelperBase {
     }
 
     public void openLoginRegistrationForm() {
-        click(By.xpath("//a[text()='LOGIN']"));
+        click(By.xpath("//a[text()='LOGתIN']"));
     }
 
 

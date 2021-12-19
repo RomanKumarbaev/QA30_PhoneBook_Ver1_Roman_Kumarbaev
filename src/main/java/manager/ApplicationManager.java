@@ -14,7 +14,7 @@ public class ApplicationManager {
 
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
-    // WebDriver wd;
+     //WebDriver wd;
 
     EventFiringWebDriver wd;
 
